@@ -1,0 +1,13 @@
+
+Class focus:
+
+Linked Lists
+Stacks
+Queues
+Binary Trees
+
+3 days on this, then Angular, Authorization
+
+Project pitch day next week
+Start thinking about ideas for your next Project
+More than likely Angular based
