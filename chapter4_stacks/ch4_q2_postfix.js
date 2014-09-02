@@ -16,7 +16,7 @@ Chapter 4 - Stacks
 //function: convert an infix (X+Y) to a postfix (X Y +)
 //function: evaluate the expression
 
-var Stack = require('lib/stack');
+var Stack = require('../lib/stack');
 
 var input = "1+2";
 var operands = new Stack();
