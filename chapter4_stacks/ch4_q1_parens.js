@@ -8,7 +8,13 @@ Chapter 4 - Stacks
     in the expression where a parenthesis is missing. An example of an arithmetic expression
     with unbalanced parentheses is 2.3 + 23 / 12 + (3.14159 * .24 + 1
 */
+
 //MJG note - I can't figure out how to solve this one
+
+/*  From Ivan: the missing parenthisis finder could console.log
+    a string saying Found unmatched ) at position 2 or found unmatched (
+    at position 3 or no unmatched parentheses
+*/
 
 var s = new Stack();
 var expression = "2.3 + 23 / 12 + (3.14159 * .24";
@@ -18,10 +24,6 @@ missingParen(expression);
 function missingParen(expression) {
   var parenCount = 0;
   var parenStack = new Stack();
-/*  From Ivan: the missing parenthisis finder could console.log
-    a string saying Found unmatched ) at position 2 or found unmatched (
-    at position 3 or no unmatched parentheses
-*/
 
   for (var i = 0; i < expression.length; i++) {
     if (expression[i] === "(") {
@@ -70,5 +72,3 @@ function clear() {
 function length() {
  return this.top;
 }
-
-
