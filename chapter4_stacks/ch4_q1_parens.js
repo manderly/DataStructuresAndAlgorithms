@@ -9,66 +9,35 @@ Chapter 4 - Stacks
     with unbalanced parentheses is 2.3 + 23 / 12 + (3.14159 * .24 + 1
 */
 
-//MJG note - I can't figure out how to solve this one
-
 /*  From Ivan: the missing parenthisis finder could console.log
     a string saying Found unmatched ) at position 2 or found unmatched (
     at position 3 or no unmatched parentheses
 */
+var Stack = require('../lib/stack');
 
 var s = new Stack();
-var expression = "2.3 + 23 / 12 + (3.14159 * .24";
+var expression = "2.3 + (23 / 12 + 3.14159 * .24";
 
 missingParen(expression);
 
 function missingParen(expression) {
-  var parenCount = 0;
-  var parenStack = new Stack();
+  var s = new Stack();
 
   for (var i = 0; i < expression.length; i++) {
     if (expression[i] === "(") {
-      parenCount ++;
-      parenStack.push(i);
-    } else if (expression[i] === ")") {
-      parenCount --;
-      parenStack.pop();
+      s.push(i);
+    }
+
+    if (expression[i] === ")") {
+      if (s.pop() === undefined) { //if there's nothing to pop, then this ) wasn't preceeded by a (
+        console.log("Mismatched ) at " + i); //return the index of )
+      }
     }
   }
-  if (parenCount === 0) {
-    console.log("No unmatched parenthesis!");
-  } else {
-    console.log("Mismatched ( at position " + parenStack.peek());
+
+  if (s.length() === 0) { //if the stack length is 0, all the ( ) found were paired
+    console.log("no mismatched parens!");
+  } else if (s.length() === 1) {
+    console.log("Mismatched ( at position " + s.peek());
   }
-}
-//MJG question: how to check for unmatched ) ?
-
-function Stack() {
- this.dataStore = [];
- this.top = 0;
- this.push = push;
- this.pop = pop;
- this.peek = peek;
- this.clear = clear;
- this.length = length;
-}
-
-function push(element) {
- this.dataStore[this.top++] = element;
-}
-
-function peek() {
- return this.dataStore[this.top-1];
-}
-
-function pop() {
- return this.dataStore[--this.top];
-}
-
-function clear() {
- this.top = 0;
- this.dataStore.length = 0;
-}
-
-function length() {
- return this.top;
 }

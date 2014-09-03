@@ -7,7 +7,14 @@ Chapter 5 - Queues
     that allows elements to be added and removed from both the front and the back of
     the list. Test your class in a program.
 */
-//MJG: Why does this assignment ask you to circumvent the queue's restraints?
+//MJG: Why does the "dequeue" assignment ask you to circumvent the queue's restraints?
+//It has you add add to front and remove from back.
+
+//MJG: How to find unpaired closed parens?
+
+//MJG: Stack homework: palindrome example. Wouldn't a stack be more appropriate?
+//Why make a queue act like a stack?
+
 var Queue = require('../lib/queue');
 
 Queue.prototype.addToFront = function(element) { //add to the front
