@@ -10,10 +10,10 @@ Chapter 5 - Queues
 //MJG: Why does the "dequeue" assignment ask you to circumvent the queue's restraints?
 //It has you add add to front and remove from back.
 
-//MJG: How to find unpaired closed parens?
-
 //MJG: Stack homework: palindrome example. Wouldn't a stack be more appropriate?
 //Why make a queue act like a stack?
+
+
 
 var Queue = require('../lib/queue');
 
