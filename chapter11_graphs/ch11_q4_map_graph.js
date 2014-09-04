@@ -21,9 +21,8 @@ home.vertexList = ["Seattle","Shoreline","SoDo", //0 1 2
                     "Renton","Bothell","Kirkland", //3 4 5
                     "Lynnwood","Bellevue","Everett", //6 7 8
                     "Issaquah","Olympia","Redmond"]; //9 10 11
-home.showGraph();
+//home.showGraph();
 home.topSort();
-
 home.bfs(0); //start in seattle
 var vertex = 8; //everett is destination
 var source = 0;
