@@ -3,6 +3,7 @@ var home = new Graph(12); //number passed here is number of vertices in this gra
 
 //create all the connection edges
 //Question: do I need to create the connections in both directions?
+//Answer: You do need at least every city represented as the first parameter
 home.addEdge(0,1); //Seattle to Shoreline
 home.addEdge(0,2); //Seattle to SoDo
 home.addEdge(1,4); //Shoreline to Bothell
@@ -16,7 +17,10 @@ home.addEdge(5,11); //Kirkland to Redmond
 home.addEdge(6,8); //Lynnwood to Everett
 home.addEdge(7,3); //Bellevue to Renton
 home.addEdge(7,9); //Bellevue to Issaquah
+home.addEdge(8,6); //Everett to Lynnwood
+home.addEdge(9,7); //Issaquah to Bellevue
 home.addEdge(10,3); //Olympia to Renton
+home.addEdge(11,5); //Redmond to Kirkland
 home.vertexList = ["Seattle","Shoreline","SoDo", //0 1 2
                     "Renton","Bothell","Kirkland", //3 4 5
                     "Lynnwood","Bellevue","Everett", //6 7 8
