@@ -2,11 +2,6 @@
 Chapter 10 - Binary Search Tree
 ****************/
 
-/*
-5:  Write a program that stores the words from a large text file in a BST and
-    displays the number of times each word occurs in the text.
-*/
-
 var BST = require('../lib/binarysearchtree');
 var wordsBST = new BST();
 
@@ -48,7 +43,11 @@ console.log("The maximum value in this binary search tree is " + wordsBST.max())
 //4. Add a min() function to the BST class that finds the minimum value in a BST.
 console.log("The minimum value in this binary search tree is " + wordsBST.min());
 
-//5. Output each word count in a BST where each node retains a count of reoccurrences...
+//5:  Write a program that stores the words from a large text file in a BST and
+//    displays the number of times each word occurs in the text.
+
 console.log("Words with counts: ");
 wordsBST.inOrder(wordsBST.root);
+
+
 
